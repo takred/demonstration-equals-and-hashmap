@@ -15,6 +15,12 @@ public class Main {
         hashMap.put(key2, 200);
         System.out.println();
 
+        Integer value = 1;
+        for (int i = 0; i < 50; i++) {
+            hashMap.put(new Key(value.toString(), value), value);
+            value++;
+        }
+
         System.out.println("Для проверки пытаемся достать значения по ключу.");
         System.out.println(hashMap.get(key) + " - значение по 1-ому ключу.");
         System.out.println(hashMap.get(key2) + " - значение по 2-ому ключу.");
